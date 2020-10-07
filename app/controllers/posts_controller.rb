@@ -5,6 +5,9 @@ class PostsController < ApplicationController
     @authors = Author.all
     if !params[:author].blank?
       @posts= Post.where(author: params[:author])
+      elsif !params[:date].blank?
+      
+    end
   end
 
   def show
